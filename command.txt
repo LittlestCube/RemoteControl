@@ -1,1 +1,1 @@
-open -a Chess
+ps -ef
