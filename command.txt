@@ -1,1 +1,1 @@
-ps -ef
+echo "hello"
